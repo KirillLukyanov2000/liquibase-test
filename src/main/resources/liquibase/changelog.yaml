@@ -1,0 +1,5 @@
+databaseChangeLog:
+  - include:
+      file: liquibase/v1.0/2023NOV10_create_table_users.yaml
+  - include:
+      file: liquibase/v2.0/2023NOV10_fill_table_users.yaml
