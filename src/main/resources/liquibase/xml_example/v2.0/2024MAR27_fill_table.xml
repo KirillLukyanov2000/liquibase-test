@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd">
+
+    <changeSet  id="2024MAR27_fill_table"  author="Kirill Lukyanov">
+        <addColumn  tableName="person">
+            <column name="username" type="varchar(15)">
+                <constraints unique="true"/>
+            </column>
+        </addColumn>
+
+        <insert tableName="person">
+            <column name="firstname">Ivan</column>
+            <column name="lastname">Ivanov</column>
+            <column name="state">CA</column>
+        </insert>
+    </changeSet>
+
+   </databaseChangeLog>
+

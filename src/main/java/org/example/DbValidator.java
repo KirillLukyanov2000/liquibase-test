@@ -31,7 +31,7 @@ public class DbValidator {
                         .getInstance()
                         .findCorrectDatabaseImplementation(new JdbcConnection(connection));
 
-                Liquibase liquibase = new liquibase.Liquibase(YAML_CHANGELOG, new ClassLoaderResourceAccessor(), database);
+                Liquibase liquibase = new liquibase.Liquibase(XML_CHANGELOG, new ClassLoaderResourceAccessor(), database);
 
                 liquibase.update(new Contexts(), new LabelExpression());
 
